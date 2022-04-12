@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpPower;
+    public float jumpPower = 10;
+    public float liftingForce = 10;
     Rigidbody2D rb;
     Collider2D boxCollider;
+
+    bool doubleJumped;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnValidate()
+    {
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -22,12 +29,24 @@ public class PlayerController : MonoBehaviour
         {
             if (IsGrounded())
             {
-                rb.velocity = new Vector2(0, jumpPower); 
+                rb.velocity = new Vector2(0, jumpPower);
+                doubleJumped = false;
+            }
+            else if(!doubleJumped)
+            {
+                rb.velocity = new Vector2(0, jumpPower);
+                doubleJumped = true;
+            }
+        }
+        else if(Input.GetMouseButton(0))
+        {
+            if(rb.velocity.y < 0)
+            {
+                rb.AddForce(Vector2.up * liftingForce * rb.velocity.y * -0.5f * Time.deltaTime);
             }
         }
     }
-
-    bool IsGrounded()
+    bool IsGrounded() //Sprawdza czy grzacz stoi na ziemi
     {
         RaycastHit2D hit = Physics2D.BoxCast(
             transform.position,
