@@ -7,19 +7,24 @@ public class WorldScroller : MonoBehaviour
     public Transform tile1;
     public Transform tile2;
 
-    public float speed = 0.1f;
+    public Transform[] allTiles;
+
     private void FixedUpdate()
     {
+        float speed = GameManager.Instance.worldScrollingSpeed;
+
         tile1.position -= new Vector3(speed, 0, 0);
         tile2.position -= new Vector3(speed, 0, 0);
 
         if(tile2.position.x <= 0)
         {
-            tile1.position = tile2.position + new Vector3(16, 0, 0);
+            Destroy(tile1.gameObject);
+            Vector3 position = tile2.position + new Vector3(16, 0, 0);
+            Transform tileToCreate = allTiles[Random.Range(0, allTiles.Length)];
+            Transform newTile = Instantiate(tileToCreate, position, Quaternion.identity);
 
-            Transform tmp = tile1;
             tile1 = tile2;
-            tile2 = tmp;
+            tile2 = newTile;
         }
     }
 
