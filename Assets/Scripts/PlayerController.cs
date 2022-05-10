@@ -46,10 +46,22 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Obstacle"))
+        {
+            ObstacleHit();
+        }
+    }
+    private void ObstacleHit()
+    {
+        GameManager.Instance.GameOver();
+    }
     bool IsGrounded() //Sprawdza czy grzacz stoi na ziemi
     {
         RaycastHit2D hit = Physics2D.BoxCast(
-            transform.position,
+            (Vector2)transform.position + boxCollider.offset,
             boxCollider.bounds.size,
             0,
             Vector2.down,
@@ -63,15 +75,15 @@ public class PlayerController : MonoBehaviour
     void DebugDraw()
     {
         Vector3 playerPos = transform.position;
-        Debug.DrawLine(playerPos, playerPos + Vector3.down * 1.1f);
+        Debug.DrawLine(playerPos + (Vector3)boxCollider.offset, playerPos + (Vector3)boxCollider.offset + Vector3.down * boxCollider.bounds.extents.y);
     }
 
     private void OnDrawGizmosSelected()
     {
         Vector3 playerPos = transform.position;
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(playerPos, transform.localScale);
+        Gizmos.DrawWireCube(playerPos + (Vector3)boxCollider.offset, boxCollider.bounds.size);
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(playerPos + Vector3.down * 0.1f, transform.localScale);
+        Gizmos.DrawWireCube(playerPos + (Vector3)boxCollider.offset + Vector3.down * 0.1f, boxCollider.bounds.size);
     }
 }

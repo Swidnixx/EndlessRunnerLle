@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -25,10 +26,22 @@ public class GameManager : MonoBehaviour
 
     //UI
     public Text scoreText;
+    public GameObject endGamePanel;
 
     private void FixedUpdate()
     {
         score += worldScrollingSpeed;
         scoreText.text = score.ToString("0");
+    }
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        endGamePanel.SetActive(true);
+    }
+
+    public void GameRestart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
