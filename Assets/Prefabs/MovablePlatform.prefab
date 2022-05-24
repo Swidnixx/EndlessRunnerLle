@@ -67,6 +67,14 @@ PrefabInstance:
       value: Obstacle 1
       objectReference: {fileID: 0}
     - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Size.x
+      value: 4.0793905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.19669342
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 4
       objectReference: {fileID: 0}

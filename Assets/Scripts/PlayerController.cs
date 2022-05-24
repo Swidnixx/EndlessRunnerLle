@@ -53,6 +53,12 @@ public class PlayerController : MonoBehaviour
         {
             ObstacleHit();
         }
+
+        if(collision.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.Instance.CoinCollected();
+        }
     }
     private void ObstacleHit()
     {

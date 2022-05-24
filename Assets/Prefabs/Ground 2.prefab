@@ -190,6 +190,14 @@ PrefabInstance:
       value: Obstacle 1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Size.x
+      value: 5.44081
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.08058214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 5
       objectReference: {fileID: 0}
@@ -266,6 +274,14 @@ PrefabInstance:
     - target: {fileID: 8233005078019448334, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
       propertyPath: m_Name
       value: Obstacle 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Size.x
+      value: 6.5315876
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.25419044
       objectReference: {fileID: 0}
     - target: {fileID: 8233005078019448335, guid: eb81e6eba898ed041a733ab2bb6edc96, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
