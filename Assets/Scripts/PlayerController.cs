@@ -59,10 +59,19 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.Instance.CoinCollected();
         }
+
+        if(collision.CompareTag("Battery"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.Instance.BatteryCollected();
+        }
     }
     private void ObstacleHit()
     {
-        GameManager.Instance.GameOver();
+        if (!GameManager.Instance.battery.isActive)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
     bool IsGrounded() //Sprawdza czy grzacz stoi na ziemi
     {

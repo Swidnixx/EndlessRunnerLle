@@ -32,8 +32,13 @@ public class GameManager : MonoBehaviour
     public Text coinsText;
     public Text highscoreText;
 
+    //Powerups
+    public Battery battery;
+
     private void Start()
     {
+        battery.isActive = false;
+
         coins = PlayerPrefs.GetInt("Coins", 0);
         coinsText.text = coins.ToString();
 
@@ -70,5 +75,19 @@ public class GameManager : MonoBehaviour
         coins++;
         coinsText.text = coins.ToString();
         PlayerPrefs.SetInt("Coins", coins);
+    }
+
+    public void BatteryCollected()
+    {
+        battery.isActive = true;
+        worldScrollingSpeed += battery.speedBoost;
+
+        Invoke("CancelBattery", battery.duration);
+    }
+
+    void CancelBattery()
+    {
+        worldScrollingSpeed -= battery.speedBoost;
+        battery.isActive = false;
     }
 }
