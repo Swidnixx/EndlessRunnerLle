@@ -18,8 +18,7 @@ public class CoinController : MonoBehaviour
             return;
         }
 
-        if(Vector3.Distance(transform.position, player.position) 
-            <= gm.magnet.range)
+        if(Vector3.Distance(transform.position, player.position) <= gm.magnet.range )
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,

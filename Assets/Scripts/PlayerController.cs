@@ -65,6 +65,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.Instance.BatteryCollected();
         }
+
+        if (collision.CompareTag("Magnet"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.Instance.MagnetCollected();
+        }
     }
     private void ObstacleHit()
     {

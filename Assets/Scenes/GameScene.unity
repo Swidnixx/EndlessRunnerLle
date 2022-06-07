@@ -1120,8 +1120,8 @@ MonoBehaviour:
   tile2: {fileID: 866886363}
   allTiles:
   - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
-  - {fileID: 6524403840829225431, guid: 974f5885128da954bb85877d802bb998, type: 3}
-  - {fileID: 6524403840829225431, guid: 46e5d14a27e6e774fa4eca780333a415, type: 3}
+  - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
+  - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
   - {fileID: 6524403840829225431, guid: 868100ac5ca6a34409ccd91e3608de0e, type: 3}
 --- !u!4 &1701703061
 Transform:
@@ -1297,6 +1297,7 @@ MonoBehaviour:
   coinsText: {fileID: 617825357}
   highscoreText: {fileID: 1432637481}
   battery: {fileID: 11400000, guid: 49cc823a4e7c5f04c8141816db394536, type: 2}
+  magnet: {fileID: 11400000, guid: a9478f4e90fc99948acee01dea3d9637, type: 2}
 --- !u!4 &1883167552
 Transform:
   m_ObjectHideFlags: 0
@@ -1463,60 +1464,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060524805}
   m_CullTransparentMesh: 1
---- !u!1001 &3693188974872895917
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.787564
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.9443631
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722320, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3693188975196722327, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}
-      propertyPath: m_Name
-      value: Battery
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e6a8ecb1c3b60443af5c03805643436, type: 3}

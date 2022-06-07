@@ -34,10 +34,12 @@ public class GameManager : MonoBehaviour
 
     //Powerups
     public Battery battery;
+    public Magnet magnet;
 
     private void Start()
     {
         battery.isActive = false;
+        magnet.isActive = false;
 
         coins = PlayerPrefs.GetInt("Coins", 0);
         coinsText.text = coins.ToString();
@@ -79,6 +81,11 @@ public class GameManager : MonoBehaviour
 
     public void BatteryCollected()
     {
+        if(battery.isActive)
+        {
+            CancelInvoke("CancelBattery");
+            CancelBattery();
+        }
         battery.isActive = true;
         worldScrollingSpeed += battery.speedBoost;
 
@@ -89,5 +96,19 @@ public class GameManager : MonoBehaviour
     {
         worldScrollingSpeed -= battery.speedBoost;
         battery.isActive = false;
+    }
+
+    public void MagnetCollected()
+    {
+        if (magnet.isActive)
+            CancelInvoke("CancelMagnet");
+
+        magnet.isActive = true;
+        Invoke("CancelMagnet", magnet.duration);
+    }
+
+    public void CancelMagnet()
+    {
+        magnet.isActive = false;
     }
 }
