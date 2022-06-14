@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505489c31c3648c4ba74b9caf684dfee, type: 3}
   m_Name: Battery3
   m_EditorClassIdentifier: 
+  level: 3
+  upgradeCost: 250000
   isActive: 0
   duration: 10
   speedBoost: 0.21
