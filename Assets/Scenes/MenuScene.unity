@@ -461,9 +461,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1340104100}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 552966785}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeBattery
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -778,8 +778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b9ac8cd5bb55e4aa3a3ee19e977c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battery: {fileID: 11400000, guid: 49cc823a4e7c5f04c8141816db394536, type: 2}
+  powerupManager: {fileID: 11400000, guid: f9a5d6180d928ef4091354b49836edd4, type: 2}
   batteryInfo: {fileID: 1557441387}
+  upgradeBatteryButton: {fileID: 307746842}
+  magnetInfo: {fileID: 1297973478}
+  upgradeMagnetButton: {fileID: 1807448108}
   coinsText: {fileID: 543183177}
 --- !u!1 &575258357
 GameObject:
@@ -2417,9 +2420,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1340104100}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 552966785}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: UpgradeMagnet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

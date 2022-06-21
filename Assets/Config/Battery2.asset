@@ -17,3 +17,4 @@ MonoBehaviour:
   isActive: 0
   duration: 5
   speedBoost: 0.146
+  upgrade: {fileID: 11400000, guid: fbd1c96923f6c754e82dc510742e12d5, type: 2}

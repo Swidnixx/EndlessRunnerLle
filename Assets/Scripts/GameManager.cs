@@ -33,11 +33,15 @@ public class GameManager : MonoBehaviour
     public Text highscoreText;
 
     //Powerups
+    public PowerupManager powerupManager;
     public Battery battery;
     public Magnet magnet;
 
     private void Start()
     {
+        battery = powerupManager.battery;
+        magnet = powerupManager.magnet;
+
         battery.isActive = false;
         magnet.isActive = false;
 

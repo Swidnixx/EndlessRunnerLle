@@ -802,7 +802,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &943625359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1120,9 +1120,11 @@ MonoBehaviour:
   tile2: {fileID: 866886363}
   allTiles:
   - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
-  - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
-  - {fileID: 6524403840829225431, guid: e3985049b75271d4bb0029489f24bbf2, type: 3}
+  - {fileID: 6524403840829225431, guid: 974f5885128da954bb85877d802bb998, type: 3}
+  - {fileID: 6524403840829225431, guid: 46e5d14a27e6e774fa4eca780333a415, type: 3}
   - {fileID: 6524403840829225431, guid: 868100ac5ca6a34409ccd91e3608de0e, type: 3}
+  - {fileID: 6524403840829225431, guid: 40f5fc8e020581648a1a51a753b3003f, type: 3}
+  - {fileID: 6524403840829225431, guid: 2bb02dddde290a24a9b321ba0a3e4911, type: 3}
 --- !u!4 &1701703061
 Transform:
   m_ObjectHideFlags: 0
@@ -1291,11 +1293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328074e2f5c1e6e4ead0da4a617be6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldScrollingSpeed: 0.1
+  worldScrollingSpeed: 0.15
   scoreText: {fileID: 544912024}
   endGamePanel: {fileID: 2008114854}
   coinsText: {fileID: 617825357}
   highscoreText: {fileID: 1432637481}
+  powerupManager: {fileID: 11400000, guid: f9a5d6180d928ef4091354b49836edd4, type: 2}
   battery: {fileID: 11400000, guid: 49cc823a4e7c5f04c8141816db394536, type: 2}
   magnet: {fileID: 11400000, guid: a9478f4e90fc99948acee01dea3d9637, type: 2}
 --- !u!4 &1883167552
